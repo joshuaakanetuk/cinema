@@ -23,12 +23,23 @@
 html, body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
  * {
      box-sizing: border-box;
      font-family: Lunchtype Light;
  } 
+
+ .announcement {
+     height: 50px;
+     font-family: Lunchtype Medium;
+     background-color: #003459;
+    color: #FFBBF8;
+    font-family: Lunchtype Medium;
+    display: flex;
+    padding: 0 15px;
+ }
 
 main {
     width: 100%;
@@ -46,7 +57,7 @@ a {
 }
 // MENU
 #menu {
-    // display: none;
+    display: none;
 }
 
 .menu-- {
@@ -96,6 +107,7 @@ a {
 
 // CART
 .cart-- {
+    padding-top: 55px;
     height: 100%;
     background: #FFBBF8;
 }
@@ -242,6 +254,86 @@ input[type=number]:focus {
     align-items: center;
     font-family: Lunchtype Medium;
 }
+// PRODUCT
+.product--info {
+    background-color: #FFBBF8;
+    padding: 15px;
+    color: #003459;
+}
+
+.product--info .title {
+    font-family: Lunchtype Medium;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.spr-badge {
+    margin-top: 10px;
+}
+
+#AddToCart {
+    border: none;
+    border-top: 1px solid #003459;
+    border-bottom: 1px solid #003459;
+    width: 100%;
+    height: 50px;
+    background-color: #FFBBF8;
+    color: #003459;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Lunchtype Medium;
+}
+
+.spr-container {
+    border: none !important;
+}
+
+.spr-review-header-byline {
+    color: #003459!important;
+}
+
+#shopify-product-reviews {
+    margin: 0 !important;
+    background-color: #FFBBF8;
+}
+
+.product--image, #imagebox {
+    width: 100%;
+    height: 50%;
+    background: #D1CAFF;
+    white-space: nowrap;
+    font-size: 0;
+    transform: translateX(0);
+    position: relative;
+}
+// https://codepen.io/AlexEmashev/pen/xZWNeV
+.slide {
+    width: 100%;
+    height: 100%;
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animate {
+    transition: all .5s ease-out;
+  }
+
+
+.product--info .price {
+    margin-top: 15px;
+    font-family: Lunchtype Medium;
+    font-size: 48px;
+}
+
+.product--info .description {
+    margin-top: 15px;
+    font-family: Lunchtype Regular;
+    // font-weight: bolder;
+}
 
 // HEADER
 .header-- {
@@ -251,10 +343,16 @@ input[type=number]:focus {
     padding: 5px 7px;
     width: 100%;
     justify-content: space-between;
+    
 }
 
 .header-- a {
     color: {{ settings.font_color }};
+    font-size: 42px;
+}
+
+.header-- svg {
+    fill: {{ settings.font_color }};
 }
 
 // HERO
@@ -302,7 +400,6 @@ input[type=number]:focus {
 
 // NEWSLetter
 .news-- {
-    height: 175px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -356,7 +453,7 @@ input[type=number]:focus {
 
 // Footer
 .footer-- {
-    height: 200px;
+    // height: 225px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -384,6 +481,7 @@ input[type=number]:focus {
 }
 
 .footer--links {
+    display: flex;
 }
 
 .footer--copyright {

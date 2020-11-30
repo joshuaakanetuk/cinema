@@ -10,6 +10,11 @@
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
 </head>
 <body>
 
@@ -17,7 +22,9 @@
 
   <main role="main">
     {{ content_for_layout }}
-     {% comment %} {% section 'footer' %} {% endcomment %}
+    {% unless template == 'cart' %}
+     {% section 'footer' %}
+     {%endunless%}
   </main>
  
 </body>
